@@ -26,7 +26,7 @@ export interface Slider {
 	productId: number;
 }
 
-const DB_FILE = __dirname + '/db.json';
+const DB_FILE = process.cwd() + '/db.json';
 
 export class Database {
 	private catalogue: Catalogue;
