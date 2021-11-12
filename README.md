@@ -2,28 +2,29 @@ Katalog Sitesi Case Study
 
 # Frontend
 
-    * Anasayfa
-        * Header
-        * Body
-        * Footer
+-   Anasayfa
 
-    * Kategori Detay/Ürün Liste
-        * Kategoriye ait ürünlerin listesi
-    * Ürün Detay
-        * Ürün bilgileri yer  qalıcak.
-        * Favoriye ekleme butonu olacak.
+    -   Header
+    -   Body
+    -   Footer
+
+-   Kategori Detay/Ürün Liste
+    -   Kategoriye ait ürünlerin listesi
+-   Ürün Detay
+    -   Ürün bilgileri yer qalıcak.
+    -   Favoriye ekleme butonu olacak.
 
 # Backend
 
-    * Kategori oluşturma servisi
-    * Kategori liste servisi
-    * Kategori detay servisi
-    * Ürün oluşturma servisi
-    * Ürün liste servisi
-    * Ürün detay servisi
-    * Ürünü favoriye ekleme servisi
-    * Slider oluşturma servisi
-    * Slider liste servisi
+-   Kategori oluşturma servisi
+-   Kategori liste servisi
+-   Kategori detay servisi
+-   Ürün oluşturma servisi
+-   Ürün liste servisi
+-   Ürün detay servisi
+-   Ürünü favoriye ekleme servisi
+-   Slider oluşturma servisi
+-   Slider liste servisi
 
 ## Backend Açıklaması
 
