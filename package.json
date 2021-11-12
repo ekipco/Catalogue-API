@@ -2,7 +2,8 @@
 	"name": "catalogue-api",
 	"version": "1.0.0",
 	"description": "",
-	"main": "dist/app.js",
+	"main": "build/app.js",
+	"bin": "build/app.js",
 	"scripts": {
 		"start": "tsc && node ./build/app.js",
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -17,5 +18,10 @@
 	},
 	"dependencies": {
 		"express": "^4.17.1"
+	},
+	"pkg": {
+		"scripts": "build/**/*.js",
+		"assets": "build/**/*.json",
+		"outputPath": "dist"
 	}
 }
