@@ -19,7 +19,8 @@
 					"path": [
 						"categories"
 					]
-				}
+				},
+				"description": "# Description\nFetches product categories from database.\n\n# Suggested Return Values\n* #### Object Array\n    * **id (required, string|number):** Distinct id of the category\n    * **name (required, string):** Name of the category"
 			},
 			"response": [
 				{
@@ -53,16 +54,23 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/categories/1",
+					"raw": "localhost:3000/categories/:id",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"categories",
-						"1"
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
 					]
-				}
+				},
+				"description": "# Description\nFetches details of the product category with the given id from database.\n\n# Suggested Return Values\n* #### Object\n    * **id (required, string|number):** Distinct id of the category\n    * **name (required, string):** Name of the category\n    * **description (optional, string):** Description of the category"
 			},
 			"response": [
 				{
@@ -157,17 +165,24 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/categories/1/products",
+					"raw": "localhost:3000/categories/:id/products",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"categories",
-						"1",
+						":id",
 						"products"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
 					]
-				}
+				},
+				"description": "# Description\nFetches products under the category of the given id from database.\n\n# Suggested Return Values\n* #### Object Array\n    * **id (required, string|number):** Distinct id of the product\n    * **name (required, string):** Name of the product\n    * **description (optional, string):** Description of the product\n    * **price (required, number):** Price of the product\n    * **isFavorite (required, boolean):** Is the product favorited or not"
 			},
 			"response": [
 				{
@@ -203,16 +218,23 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/products/1",
+					"raw": "localhost:3000/products/:id",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"products",
-						"1"
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
 					]
-				}
+				},
+				"description": "# Description\nFetches details of product with given id from database.\n\n# Suggested Return Values\n* #### Object\n    * **id (required, string|number):** Distinct id of the product\n    * **name (required, string):** Name of the product\n    * **description (optional, string):** Description of the product\n    * **price (required, number):** Price of the product\n    * **isFavorite (required, boolean):** Is the product favorited or not"
 			},
 			"response": [
 				{
@@ -248,7 +270,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"name\": \"\",\r\n        \"description\": \"\",\r\n        \"category\": 0,\r\n        \"price\": 0\r\n}",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"description\": \"\",\r\n    \"category\": 0,\r\n    \"price\": 0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -264,7 +286,8 @@
 					"path": [
 						"products"
 					]
-				}
+				},
+				"description": "# Description\nCreates a product with given details on the database.\n\n# Request Details\n* #### Body\n    * **name (required, string):** Name of the product\n    * **description (required, string):** Description of the product\n    * **category (required, string|number):** Category id of the product's category\n    * **price (required, number):** Price of the product"
 			},
 			"response": [
 				{
@@ -322,7 +345,8 @@
 					"path": [
 						"sliders"
 					]
-				}
+				},
+				"description": "# Description\nFetches sliders for the featured products.\n\n# Suggested Return Values\n* #### Object Array\n    * **image (required, string):** Url or path of the image\n    * **productId (required, string):** Id of the product slider is featuring"
 			},
 			"response": [
 				{
@@ -357,7 +381,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"image\": \"\",\r\n        \"productId\": 0\r\n    }",
+					"raw": "{\r\n    \"image\": \"\",\r\n    \"productId\": 0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -373,7 +397,8 @@
 					"path": [
 						"sliders"
 					]
-				}
+				},
+				"description": "# Description\nAdds a slider to the webpage slide show featuring products.\n\n# Request Details\n* #### Body\n    * **image (required, string):** Url or path of the slider image\n    * **productId (required, number):** Id of the product slider is featuring"
 			},
 			"response": [
 				{
@@ -433,7 +458,8 @@
 					"path": [
 						"favorite"
 					]
-				}
+				},
+				"description": "# Description\nFavorite a product with given productId.\n\n# Request Details\n* #### Body\n    * **productId (required, number):** Id of the product to favorite"
 			},
 			"response": [
 				{
