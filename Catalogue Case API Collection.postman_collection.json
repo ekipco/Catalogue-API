@@ -122,7 +122,8 @@
 					"path": [
 						"categories"
 					]
-				}
+				},
+				"description": "# Description\nCreates a category with given details on the database.\n\n# Request Details\n* #### Body\n    * **name (required, string):** Name of the category\n    * **description (required, string):** Description of the category"
 			},
 			"response": [
 				{
