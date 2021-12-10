@@ -1,6 +1,6 @@
 # Katalog Sitesi Case Study
 
-API'yi çalıştırmak için aşağıdaki komutları çalıştırın.
+API'ye erişmek için aşağıdaki komutları çalıştırın.
 
 ```
 npm install
