@@ -1,42 +1,13 @@
 # Katalog Sitesi Case Study
 
-## Frontend
+API'yi çalıştırmak için aşağıdaki komutları çalıştırın.
 
--   Anasayfa
+```
+npm install
+npm run start
+```
 
-    -   Header
-    -   Body
-    -   Footer
-
--   Kategori Detay/Ürün Liste
-
-    -   Kategoriye ait ürünlerin listesi
-
--   Ürün Detay
-
-    -   Ürün bilgileri yer qalıcak.
-    -   Favoriye ekleme butonu olacak.
-
----
-
-## Backend
-
-Bir ürün katalog web sitemiz olduğunu düşünelim. Anasayfasında öne çıkan ürünler slider içerisinde
-gösteriliyor. Bu site içerisinde kullanıcılar ürünleri kategorilerine göre inceleyip, favorilerine
-ekleyebiliyorlar.
-
-Web sitesi frontend kısmı bilgileri GET/POST methodları ile backend tarafından çekmekte.
-
-Backend tarafı, verilen
-[Postman koleksiyonuna](https://github.com/yasinpeksen/Catalogue-API/blob/main/Catalogue%20Case%20API%20Collection.postman_collection.json)
-uygun bir şekilde Typescript, Express, ESLint ve MongoDB kullanılarak hazırlanması gerekiyor.
-
--   Kategori oluşturma servisi
--   Kategori liste servisi
--   Kategori detay servisi
--   Ürün oluşturma servisi
--   Ürün liste servisi
--   Ürün detay servisi
--   Ürünü favoriye ekleme servisi
--   Slider oluşturma servisi
--   Slider liste servisi
+Konsol çıktısı aşağıdaki gibi olmalıdır.
+```
+server started at http://localhost:3000
+```
