@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { addCategory, getCategories, getCategory } from './controllers/CategoryController';
-import { addToFavorite } from './controllers/FavoriteController';
+import { addToFavorite, getFavorites } from './controllers/FavoriteController';
 import { addProduct, getProduct, getProducts } from './controllers/ProductController';
 import { addSlider, getSliders } from './controllers/SliderController';
 
@@ -21,6 +21,7 @@ apiRouter.get('/sliders', getSliders);
 apiRouter.post('/sliders', addSlider);
 
 // Favorite
+apiRouter.get('/favorites', getFavorites);
 apiRouter.post('/favorite', addToFavorite);
 
 export default apiRouter;

@@ -1,7 +1,9 @@
 import express from 'express';
+var cors = require('cors')
 import apiRouter from './routes';
 
 const app = express();
+app.use(cors());
 const port = 3000; // default port to listen
 
 app.use(express.json({ strict: false }));
