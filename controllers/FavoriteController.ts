@@ -22,3 +22,14 @@ export async function addToFavorite(request: Request, response: Response) {
 		return response.status(500).json({ error: true, message: error.message });
 	}
 }
+
+export async function getFavorites(request: Request, response: Response) {
+	try {
+		const data = Database.instance.Catalogue.products.filter(
+			product => product.isFavorite
+		);
+		return response.json(data);
+	} catch (error: any) {
+		return response.status(500).json({ error: true, message: error.message });
+	}
+}
