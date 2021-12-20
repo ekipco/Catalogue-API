@@ -451,13 +451,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/favorite",
+					"raw": "localhost:3000/favorites",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"favorite"
+						"favorites"
 					]
 				},
 				"description": "# Description\nFavorite a product with given productId.\n\n# Request Details\n* #### Body\n    * **productId (required, number):** Id of the product to favorite"
@@ -494,6 +494,49 @@
 					"header": null,
 					"cookie": [],
 					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get Favorite Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/favorites",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"favorites"
+					]
+				},
+				"description": "# Description\n\nFetches products that are favorited.\n\n# Suggested Return Values\n\n*   #### Object Array\n    \n    *   **id (required, string or number):** Unique id of the product.\n    *   name **(required, string):** Name of the product.\n    *   description **(required, string):** Description of the product.\n    *   price **(required, number):** Price of the product.\n    *   category **(required, string or number):** Category ID of the product.\n    *   isFavorite **(required, boolean):** Is the product favorite or not."
+			},
+			"response": [
+				{
+					"name": "Get Favorite Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/favorites",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"favorites"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Black T-Shirt\",\n        \"description\": \"Classic t-shirt.\",\n        \"price\": 15,\n        \"category\": 1,\n        \"isFavorite\": true\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Hoodie\",\n        \"description\": \"Best hoodie ever.\",\n        \"price\": 22,\n        \"category\": 2,\n        \"isFavorite\": true\n    }\n]"
 				}
 			]
 		}
