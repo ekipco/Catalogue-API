@@ -10,7 +10,7 @@ export async function addToFavorite(request: Request, response: Response) {
 			if (product.id.toString() === productId.toString()) {
 				product = {
 					...product,
-					isFavorite: true,
+					isFavorite: !product.isFavorite,
 				};
 			}
 			return product;
