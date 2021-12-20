@@ -22,6 +22,6 @@ apiRouter.post('/sliders', addSlider);
 
 // Favorite
 apiRouter.get('/favorites', getFavorites);
-apiRouter.post('/favorite', addToFavorite);
+apiRouter.post('/favorites', addToFavorite);
 
 export default apiRouter;
